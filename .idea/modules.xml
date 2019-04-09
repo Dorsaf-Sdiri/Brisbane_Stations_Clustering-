@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/brisbane_stations_clustering-_172.iml" filepath="$PROJECT_DIR$/.idea/modules/brisbane_stations_clustering-_172.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/brisbane_stations_clustering-_172-build.iml" filepath="$PROJECT_DIR$/.idea/modules/brisbane_stations_clustering-_172-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Brisbane_Stations_Clustering-.iml" filepath="$PROJECT_DIR$/.idea/modules/Brisbane_Stations_Clustering-.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Brisbane_Stations_Clustering--build.iml" filepath="$PROJECT_DIR$/.idea/modules/Brisbane_Stations_Clustering--build.iml" />
     </modules>
   </component>
 </project>

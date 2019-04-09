@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: com.github.haifengl:smile-plot:1.5.2:jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../.ivy2/cache/com.github.haifengl/smile-plot/jars/smile-plot-1.5.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../.ivy2/cache/com.github.haifengl/smile-plot/srcs/smile-plot-1.5.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

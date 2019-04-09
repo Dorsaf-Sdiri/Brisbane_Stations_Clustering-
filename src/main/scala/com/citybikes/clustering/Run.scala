@@ -2,15 +2,18 @@ package com.citybikes.clustering
 import org.apache.spark.ml.feature.VectorAssembler
 import org.apache.spark.ml.clustering.KMeans
 import org.apache.spark.ml.clustering.BisectingKMeans
-import smile._
-import smile.plot._
-import smile.clustering.HierarchicalClustering
-//import org.apache.spark.ml.evaluation.ClusteringEvaluator
 import org.apache.spark.sql.{SparkSession,SaveMode}
 import org.apache.log4j.{Level, Logger}
+//import smile._
+//import smile.plot.dendrogram
+//import smile.graph._
+//import smile.math._
+//import smile.data._
+//import smile.clustering.HierarchicalClustering
+//import org.apache.spark.ml.evaluation.ClusteringEvaluator
 
 
-object main {
+object Run {
 
 	//Initialize logging
 	val logger: Logger = Logger.getLogger("My.Example.Code.Rules")
@@ -87,13 +90,11 @@ object main {
 		val model2 = bkm.fit(df3)
 		val cost = model2.computeCost(df3)
 		// Data Viz
-		def hclust(proximity: Array[Array[Double]], linkage: String): HierarchicalClustering
-		def proximity[T](data: Array[T], dist: Distance[T], half: Boolean = true): Array[Array[Double]]
-		def distance(data: Array[Array[Double]], half: Boolean = true): Array[Array[Double]]
-		val clusters3 = hclust(pdist(df3), "complete")
-		dendrogram(clusters3)
-		val y = clusters3.partition(5)
-		plot(df3, y, '.', Palette.COLORS)
+
+		//val clusters3 = hclust(pdist(df3), "complete")
+		//dendrogram(clusters3)
+		//val y = clusters3.partition(5)
+		//plot(df3, y, '.', Palette.COLORS)
 
 	}
 }
