@@ -4,7 +4,7 @@ import org.apache.spark.ml.clustering.KMeans
 import org.apache.spark.ml.clustering.BisectingKMeans
 import smile._
 import smile.plot._
-
+import smile.clustering.HierarchicalClustering
 //import org.apache.spark.ml.evaluation.ClusteringEvaluator
 import org.apache.spark.sql.{SparkSession,SaveMode}
 import org.apache.log4j.{Level, Logger}
@@ -90,10 +90,10 @@ object main {
 		def hclust(proximity: Array[Array[Double]], linkage: String): HierarchicalClustering
 		def proximity[T](data: Array[T], dist: Distance[T], half: Boolean = true): Array[Array[Double]]
 		def distance(data: Array[Array[Double]], half: Boolean = true): Array[Array[Double]]
-		val clusters = hclust(pdist(df3), "complete")
-		dendrogram(clusters)
-		val y = clusters.partition(5)
-		plot(x, y, '.', Palette.COLORS)
+		val clusters3 = hclust(pdist(df3), "complete")
+		dendrogram(clusters3)
+		val y = clusters3.partition(5)
+		plot(df3, y, '.', Palette.COLORS)
 
 	}
 }

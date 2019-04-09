@@ -4,7 +4,7 @@
 		module="brisbane_stations_clustering-_2.11"
 		revision="0.1"
 		status="integration"
-		publication="20190409144039"
+		publication="20190409144705"
 	>
 		<description>
 		Brisbane_Stations_Clustering-
@@ -35,8 +35,6 @@
 		<dependency org="org.apache.spark" name="spark-core_2.11" rev="2.1.2" conf="compile->default(compile)"/>
 		<dependency org="org.apache.spark" name="spark-sql_2.11" rev="2.1.2" conf="compile->default(compile)"/>
 		<dependency org="org.apache.spark" name="spark-mllib_2.11" rev="2.1.2" conf="compile->default(compile)"/>
-		<dependency org="org.clustering4ever" name="clustering4ever_2.11" rev="0.9.4" conf="compile->default(compile)"/>
-		<dependency org="com.irvingc.spark" name="dbscan_2.11" rev="0.1.0" conf="compile->default(compile)"/>
 		<dependency org="com.github.haifengl" name="smile-core" rev="1.5.2" conf="compile->default(compile)"/>
 		<dependency org="com.github.haifengl" name="smile-plot" rev="1.5.2" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe" name="config" rev="1.2.1" conf="compile->default(compile)"/>
