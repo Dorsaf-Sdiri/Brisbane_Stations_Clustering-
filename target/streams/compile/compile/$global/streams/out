@@ -1,0 +1,4 @@
+[0m[[0m[31merror[0m] [0m[0m/home/sdiri/citybikes-clustering/src/main/scala/com/citybikes/clustering/Properties.scala:10:54: ')' expected but '.' found.[0m
+[0m[[0m[31merror[0m] [0m[0m	val INPUT_DATA = config.getString(/Brisbane_CityBike.json)[0m
+[0m[[0m[31merror[0m] [0m[0m	                                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
