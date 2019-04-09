@@ -2,7 +2,8 @@ package com.citybikes.clustering
 import org.apache.spark.ml.feature.VectorAssembler
 import org.apache.spark.ml.clustering.KMeans
 import org.apache.spark.ml.clustering.BisectingKMeans
-import org.apache.spark.mllib.clustering.dbscan.DBSCAN
+import smile._
+import smile.plot._
 
 //import org.apache.spark.ml.evaluation.ClusteringEvaluator
 import org.apache.spark.sql.{SparkSession,SaveMode}
@@ -79,13 +80,20 @@ object main {
 			.option("header", "true")
 			.option("delimiter", ";")
 			.save(Properties.OUTPUT_DIR)
-
-		logger.info( "Clustered data has been saved in "+Properties.OUTPUT_DIR)
 		// Saving the dataset with labels
+		logger.info( "Clustered data has been saved in "+Properties.OUTPUT_DIR)
+		// BisectingKMeans
 		val bkm = new BisectingKMeans().setK(3).setSeed(1L).setFeaturesCol("features")
 		val model2 = bkm.fit(df3)
 		val cost = model2.computeCost(df3)
-
+		// Data Viz
+		def hclust(proximity: Array[Array[Double]], linkage: String): HierarchicalClustering
+		def proximity[T](data: Array[T], dist: Distance[T], half: Boolean = true): Array[Array[Double]]
+		def distance(data: Array[Array[Double]], half: Boolean = true): Array[Array[Double]]
+		val clusters = hclust(pdist(df3), "complete")
+		dendrogram(clusters)
+		val y = clusters.partition(5)
+		plot(x, y, '.', Palette.COLORS)
 
 	}
 }
