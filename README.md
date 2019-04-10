@@ -64,12 +64,5 @@ Then you can submit the job using **spark-submit** :
 
 _Make sure that you put the correct path to the JAR file._
 
-## Results
 
-It seems to me that the most appropriate number of clusters for this use case is 5. The cluster number could be then interpreted as north, south, east, west and center.
 
-This is a plot of stations on a map based on the result of the clustering :
-
-![Clustered stations plot](https://i.imgur.com/ob2FnFW.png)
-
-[Image link](https://i.imgur.com/ob2FnFW.png)

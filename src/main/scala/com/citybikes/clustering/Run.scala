@@ -88,7 +88,7 @@ object Run {
 			.repartition(1)
 			.write
 			.mode(SaveMode.Overwrite)
-			.format("com.databricks.spark.csv")
+			.format("json")
 			.option("header", "true")
 			.option("delimiter", ";")
 			.save(Properties.OUTPUT_DIR)
@@ -104,22 +104,17 @@ object Run {
 		//val adjustedRandIndex = GetRandIndex(predictions, predictions2)
 		// Data Viz
     //display(model, df3) Databricks
-		val ClassifiedDF = spark.read
-			.format("csv")
-			.option("header", "true") //first line in file has headers
-			.load(Properties.OUTPUT_CSV)
+	  val ClassifiedDF = spark.read.json(Properties.OUTPUT_CSV)
 		ClassifiedDF.show()
-		// Format the data
-		//ClassifiedDFF = formatData(ClassifiedDF, fields, continuousFieldIndexes)
-		//ClassifiedDFF.printSchema()
-		//ClassifiedDFF.show()
-		/*Vegas("Sample Scatterplot", width=800, height=600)
+		ClassifiedDF.printSchema()
+
+		Vegas("Sample Scatterplot", width=800, height=600)
   		.withDataFrame(ClassifiedDF)
 		  .mark(Point)
       .encodeX("latitude", Quantitative)
       .encodeY("longitude", Quantitative)
       .encodeColor("cluster", dataType=Quantitative, bin=Bin(maxbins=5.0))
-      .show */
+      .show
 
 		//Plot().withScatter("latitude", "longitude")
 		//val clusters3 = hclust(pdist(df3), "complete")
