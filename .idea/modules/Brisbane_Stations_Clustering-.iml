@@ -15,7 +15,29 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="sbt: aopalliance:aopalliance:1.0:jar" level="project" />
-    <orderEntry type="library" name="sbt: com.chuusai:shapeless_2.11:2.0.0:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.webjars.bower:vega-lite:1.2.0:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.webjars.bower:vega:2.6.5:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.webjars.bower:d3:3.5.17:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.vegas-viz:vegas_2.11:0.3.6:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.vegas-viz:vegas-macros_2.11:0.3.6:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.typelevel:macro-compat_2.11:1.1.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.typelevel:machinist_2.11:0.4.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.typelevel:cats-macros_2.11:0.4.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.typelevel:cats-core_2.11:0.4.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.spire-math:jawn-parser_2.11:0.8.4:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.spire-math:algebra_2.11:0.3.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.spire-math:algebra-std_2.11:0.3.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.scalaz:scalaz-core_2.11:7.1.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.scalafx:scalafx_2.11:8.0.92-R10:jar" level="project" />
+    <orderEntry type="library" name="sbt: io.circe:circe-parser_2.11:0.4.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: io.circe:circe-numbers_2.11:0.4.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: io.circe:circe-jawn_2.11:0.4.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: io.circe:circe-generic_2.11:0.4.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: io.circe:circe-core_2.11:0.4.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.github.mpilquist:simulacrum_2.11:0.7.0:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.github.julien-truffaut:monocle-macro_2.11:1.1.0:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.github.julien-truffaut:monocle-core_2.11:1.1.0:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.chuusai:shapeless_2.11:2.3.0:jar" level="project" />
     <orderEntry type="library" name="sbt: com.clearspring.analytics:stream:2.7.0:jar" level="project" />
     <orderEntry type="library" name="sbt: com.esotericsoftware:kryo-shaded:3.0.3:jar" level="project" />
     <orderEntry type="library" name="sbt: com.esotericsoftware:minlog:1.3.0:jar" level="project" />
@@ -37,7 +59,6 @@
     <orderEntry type="library" name="sbt: com.google.protobuf:protobuf-java:2.5.0:jar" level="project" />
     <orderEntry type="library" name="sbt: com.jhlabs:filters:2.0.235:jar" level="project" />
     <orderEntry type="library" name="sbt: com.ning:compress-lzf:1.0.3:jar" level="project" />
-    <orderEntry type="library" name="sbt: com.thoughtworks.paranamer:paranamer:2.6:jar" level="project" />
     <orderEntry type="library" name="sbt: com.twitter:chill-java:0.8.0:jar" level="project" />
     <orderEntry type="library" name="sbt: com.twitter:chill_2.11:0.8.0:jar" level="project" />
     <orderEntry type="library" name="sbt: com.typesafe:config:1.2.1:jar" level="project" />
@@ -141,18 +162,13 @@
     <orderEntry type="library" name="sbt: org.javassist:javassist:3.18.1-GA:jar" level="project" />
     <orderEntry type="library" name="sbt: org.jpmml:pmml-model:1.2.15:jar" level="project" />
     <orderEntry type="library" name="sbt: org.jpmml:pmml-schema:1.2.15:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.json4s:json4s-ast_2.11:3.2.11:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.json4s:json4s-core_2.11:3.2.11:jar" level="project" />
     <orderEntry type="library" name="sbt: org.json4s:json4s-jackson_2.11:3.2.11:jar" level="project" />
     <orderEntry type="library" name="sbt: org.mortbay.jetty:jetty-util:6.1.26:jar" level="project" />
     <orderEntry type="library" name="sbt: org.objenesis:objenesis:2.1:jar" level="project" />
     <orderEntry type="library" name="sbt: org.roaringbitmap:RoaringBitmap:0.5.11:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.scala-lang:scala-compiler:2.11.8:jar" level="project" />
     <orderEntry type="library" name="sbt: org.scala-lang:scala-library:2.11.8:jar" level="project" />
     <orderEntry type="library" name="sbt: org.scala-lang:scala-reflect:2.11.8:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.scala-lang:scalap:2.11.8:jar" level="project" />
     <orderEntry type="library" name="sbt: org.scala-lang.modules:scala-parser-combinators_2.11:1.0.4:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.scala-lang.modules:scala-xml_2.11:1.0.4:jar" level="project" />
     <orderEntry type="library" scope="TEST" name="sbt: org.scala-lang.modules:scala-xml_2.11:1.0.6:jar" level="project" />
     <orderEntry type="library" scope="TEST" name="sbt: org.scalactic:scalactic_2.11:3.0.5:jar" level="project" />
     <orderEntry type="library" name="sbt: org.scalanlp:breeze-macros_2.11:0.12:jar" level="project" />
@@ -181,5 +197,14 @@
         </SOURCES>
       </library>
     </orderEntry>
+    <orderEntry type="library" name="sbt: org.vegas-viz:vegas-spark_2.11:0.3.6:jar" level="project" />
+    <orderEntry type="library" name="sbt: co.theasi:plotly_2.11:0.2.0:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.thoughtworks.paranamer:paranamer:2.8:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.json4s:json4s-ast_2.11:3.3.0:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.json4s:json4s-core_2.11:3.3.0:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.json4s:json4s-native_2.11:3.3.0:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.json4s:json4s-scalap_2.11:3.3.0:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.scala-lang.modules:scala-xml_2.11:1.0.5:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.scalaj:scalaj-http_2.11:2.2.1:jar" level="project" />
   </component>
 </module>

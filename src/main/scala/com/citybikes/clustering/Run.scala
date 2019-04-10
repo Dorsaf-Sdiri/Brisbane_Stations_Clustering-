@@ -2,8 +2,18 @@ package com.citybikes.clustering
 import org.apache.spark.ml.feature.VectorAssembler
 import org.apache.spark.ml.clustering.KMeans
 import org.apache.spark.ml.clustering.BisectingKMeans
-import org.apache.spark.sql.{SparkSession,SaveMode}
+import org.apache.spark.sql.{SparkSession,SaveMode,DataFrame, functions}
 import org.apache.log4j.{Level, Logger}
+import org.apache.spark.ml.Pipeline
+import vegas._
+import co.theasi.plotly
+import vegas.render.WindowRenderer._
+import vegas.sparkExt._
+//import scala.math._
+//import scala.io._
+//import org.apache.spark.ml.evaluation.MulticlassClassificationEvaluator
+//import org.apache.spark.mllib.evaluation.MulticlassMetrics
+
 //import smile._
 //import smile.plot.dendrogram
 //import smile.graph._
@@ -36,21 +46,20 @@ object Run {
 
 		// Preparing the input data
 		val df = spark.read.json(Properties.INPUT_DATA)
-		val df2 = df.select("latitude", "longitude")
+
 
 		val assembler = new VectorAssembler().setInputCols(Array("latitude", "longitude")).setOutputCol("features")
-		val df3 = assembler.transform(df2).select("features")
+		val kmeans = new KMeans()
+			.setK(numberOfClusters).setSeed(numberOfSeeds)
+			.setFeaturesCol("features")
+			.setPredictionCol("cluster")
 
 		//Training model with KMeans
 		logger.info("number of cluster(s): " + Properties.NUM_CLUSTERS)
 		logger.info("number of seed(s): " + Properties.NUM_SEEDS)
-		val kmeans = new KMeans().setK(numberOfClusters).setSeed(numberOfSeeds)
-		val model = kmeans.fit(df3)
-
+		val pipeline = new Pipeline().setStages(Array(assembler, kmeans))
+		val model = pipeline.fit(df)
 		// Make predictions
-		val predictions = model.transform(df3)
-		logger.info("Predictions: ")
-		predictions.collect().foreach(logger.info(_))
 
 		// Evaluate clustering by computing Silhouette score
 		//val evaluator = new ClusteringEvaluator()
@@ -58,12 +67,12 @@ object Run {
 		//logger.info(s"Silhouette with squared euclidean distance = $silhouette")
 
 		// Evaluate clustering by computing Within Set Sum of Squared Errors.
-	  val WSSSE = model.computeCost(df3)
-	  logger.info(s"Within Set Sum of Squared Errors = $WSSSE")
+		//val WSSSE = model.computeCost(df)
+		//logger.info(s"Within Set Sum of Squared Errors = $WSSSE")
 
 		// Show the result
-		logger.info("Cluster Centres: ")
-		model.clusterCenters.foreach(logger.info(_))
+		//logger.info("Cluster Centres: ")
+		//model.clusterCenters.foreach(logger.info(_))
 
 		// Saving the model
 		model.write
@@ -87,10 +96,32 @@ object Run {
 		logger.info( "Clustered data has been saved in "+Properties.OUTPUT_DIR)
 		// BisectingKMeans
 		val bkm = new BisectingKMeans().setK(3).setSeed(1L).setFeaturesCol("features")
-		val model2 = bkm.fit(df3)
-		val cost = model2.computeCost(df3)
+		val pipeline2 = new Pipeline().setStages(Array(assembler, bkm))
+		val model2 = pipeline.fit(df)
+		//val predictions2 = model2.transform(df3)
+		//val cost = model2.computeCost(df3)
+		// Comparing the predictions of Kmeans and bisectingKmeans
+		//val adjustedRandIndex = GetRandIndex(predictions, predictions2)
 		// Data Viz
+    //display(model, df3) Databricks
+		val ClassifiedDF = spark.read
+			.format("csv")
+			.option("header", "true") //first line in file has headers
+			.load(Properties.OUTPUT_CSV)
+		ClassifiedDF.show()
+		// Format the data
+		//ClassifiedDFF = formatData(ClassifiedDF, fields, continuousFieldIndexes)
+		//ClassifiedDFF.printSchema()
+		//ClassifiedDFF.show()
+		/*Vegas("Sample Scatterplot", width=800, height=600)
+  		.withDataFrame(ClassifiedDF)
+		  .mark(Point)
+      .encodeX("latitude", Quantitative)
+      .encodeY("longitude", Quantitative)
+      .encodeColor("cluster", dataType=Quantitative, bin=Bin(maxbins=5.0))
+      .show */
 
+		//Plot().withScatter("latitude", "longitude")
 		//val clusters3 = hclust(pdist(df3), "complete")
 		//dendrogram(clusters3)
 		//val y = clusters3.partition(5)

@@ -4,7 +4,7 @@
 		module="brisbane_stations_clustering-_2.11"
 		revision="0.1"
 		status="integration"
-		publication="20190409224950"
+		publication="20190410124557"
 	>
 		<description>
 		Brisbane_Stations_Clustering-
@@ -41,6 +41,9 @@
 		<dependency org="com.github.haifengl" name="smile-math" rev="1.5.2" conf="compile->default(compile)"/>
 		<dependency org="com.github.haifengl" name="smile-data" rev="1.5.2" conf="compile->default(compile)"/>
 		<dependency org="com.github.haifengl" name="smile-plot" rev="1.5.2" conf="compile->default(compile)"/>
+		<dependency org="org.vegas-viz" name="vegas_2.11" rev="0.3.6" conf="compile->default(compile)"/>
+		<dependency org="org.vegas-viz" name="vegas-spark_2.11" rev="0.3.6" conf="compile->default(compile)"/>
+		<dependency org="co.theasi" name="plotly_2.11" rev="0.2.0" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe" name="config" rev="1.2.1" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

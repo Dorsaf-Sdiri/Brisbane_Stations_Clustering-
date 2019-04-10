@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="de.h2b.scala.lib.math:linalg_2.11:2.1.1" type="repository">
+    <properties maven-id="de.h2b.scala.lib.math:linalg_2.11:2.1.1" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/de/h2b/scala/lib/math/linalg_2.11/2.1.1/linalg_2.11-2.1.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/scala-lang/scala-library/2.11.11/scala-library-2.11.11.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

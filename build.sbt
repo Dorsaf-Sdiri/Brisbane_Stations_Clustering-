@@ -16,5 +16,8 @@ libraryDependencies ++= Seq(
 	"com.github.haifengl" % "smile-math" % "1.5.2",
 	"com.github.haifengl" % "smile-data" % "1.5.2",
   "com.github.haifengl" % "smile-plot" % "1.5.2",
+	"org.vegas-viz" %% "vegas" % "0.3.6",
+	"org.vegas-viz" %% "vegas-spark" % "0.3.6",
+  "co.theasi" %% "plotly" % "0.2.0",
 	"com.typesafe" % "config" % "1.2.1"
 )
