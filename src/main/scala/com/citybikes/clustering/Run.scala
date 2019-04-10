@@ -107,13 +107,27 @@ object Run {
 	  val ClassifiedDF = spark.read.json(Properties.OUTPUT_CSV)
 		ClassifiedDF.show()
 		ClassifiedDF.printSchema()
+		/* case class dsSchema (
+													address:String,
+													cluster:Int,
+													latitude:Double ,
+													longitude:Double,
+													name:String,
+													number:Int
+												)
+
+    val ds =df.select( df("address").cast("String").as("address"),df("cluster").cast("Int").as("cluster"),df("latitude").cast("Double").as("latitude"),df("longitude").cast("Double").as("longitude"),df("name").cast("String").as("name"),df("number").cast("Int").as("number")).as[dsSchema]
+    ds.printSchema() */
+    val dfNull = ClassifiedDF.na.fill(100)
+
+
 
 		Vegas("Sample Scatterplot", width=800, height=600)
-  		.withDataFrame(ClassifiedDF)
+  		.withDataFrame(dfNull)
 		  .mark(Point)
       .encodeX("latitude", Quantitative)
       .encodeY("longitude", Quantitative)
-      .encodeColor("cluster", dataType=Quantitative, bin=Bin(maxbins=5.0))
+      .encodeColor("cluster", dataType=Nominal, bin=Bin(maxbins=5.0))
       .show
 
 		//Plot().withScatter("latitude", "longitude")
