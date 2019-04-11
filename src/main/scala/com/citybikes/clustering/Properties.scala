@@ -11,5 +11,5 @@ object Properties {
 	val INPUT_DATA = "/home/sdiri/Bureau/Brisbane_CityBike.json"
 	val OUTPUT_DIR = "/home/sdiri/Bureau/Output"
 	val MODEL_DIR = "/home/sdiri/Bureau/Output"
-  val OUTPUT_CSV= "/home/sdiri/Bureau/part-00000-14e4188f-465a-4bd8-a52a-e6a59dcb61eb.json"
+  val OUTPUT_CSV= "/home/sdiri/Bureau/ClassifiedDF.json"
 }

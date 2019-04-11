@@ -122,13 +122,14 @@ object Run {
 
 
 
-		Vegas("Sample Scatterplot", width=800, height=600)
+		val plot= Vegas("Sample Scatterplot", width=800, height=600)
   		.withDataFrame(dfNull)
 		  .mark(Point)
       .encodeX("latitude", Quantitative)
       .encodeY("longitude", Quantitative)
       .encodeColor("cluster", dataType=Nominal, bin=Bin(maxbins=5.0))
-      .show
+
+    plot.show
 
 		//Plot().withScatter("latitude", "longitude")
 		//val clusters3 = hclust(pdist(df3), "complete")

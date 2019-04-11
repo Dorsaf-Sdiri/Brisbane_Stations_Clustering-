@@ -28,17 +28,18 @@ Before executing the code, you have to complete the configuration file available
 1) Preprocess the data and keep the quantitative variables
 2) Run Kmean and  bisecting Kmeans
 3) Compare the predictions using Rand Index
+![Image link](https://Clusters.png)
 ## Data Visualization
-Vegas library
-Smile library
-Plotly library
-Wispy library
-SwiftVis2
+Vegas library\\
+Smile library\\
+Plotly library\\
+Wispy library\\
+SwiftVis2\\
 Databricks has a built-in display() command that can display DataFrames as a table and create convenient one-click plots.
 ## Unit testing
-ScalaTest:
-To make sure of the consistency of predictions, I run the model once and saved the predictions and each time the test compare the new predictions to the saved one.
-19/04/10 14:39:39 ERROR Executor: Exit as unable to send heartbeats to driver more than 60 times
+ScalaTest: assert evaluation\\
+To make sure of the consistency of predictions, I run the model once and saved the predictions and each time the test compare the new predictions to the saved one.\\
+
 
 You can then compile files : 
 
