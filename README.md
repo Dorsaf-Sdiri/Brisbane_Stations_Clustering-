@@ -36,11 +36,13 @@ Before executing the code, you have to complete the configuration file available
 <li>Plotly library</li>
 <li>Wispy library</li>
 <li>SwiftVis2</li>
-</ul>
+
 Databricks has a built-in display() command that can display DataFrames as a table and create convenient one-click plots.
+</ul>
 ## Unit testing
-ScalaTest: assert evaluation\\
-To make sure of the consistency of predictions, I run the model once and saved the predictions and each time the test compare the new predictions to the saved one.\\
+<ul>
+<li>scalaml: evaluates the class main </li>
+<li>ScalaTest: To make sure of the consistency of predictions, I build a test that matches (assert command) the predictions to fixed tags.</li>
 
 
 You can then compile files : 

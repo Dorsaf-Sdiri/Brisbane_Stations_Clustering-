@@ -82,6 +82,7 @@ object Run {
 		logger.info( "Model has been saved in {0}"+Properties.MODEL_DIR)
 
 		val clusters = model.transform(df)
+    clusters.show()
 
 		// Saving the dataset with labels
 		clusters.drop("features")
