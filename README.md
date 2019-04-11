@@ -28,7 +28,7 @@ Before executing the code, you have to complete the configuration file available
 1) Preprocess the data and keep the quantitative variables
 2) Run Kmean and  bisecting Kmeans
 3) Compare the predictions using Rand Index
-![Alt text](https://Clusters.png)
+![Alt text](https://github.com/Dorsaf-Sdiri/Brisbane_Stations_Clustering-/blob/master/Clusters.png)
 ## Data Visualization
 <ul>
 <li>Vegas library</li>
