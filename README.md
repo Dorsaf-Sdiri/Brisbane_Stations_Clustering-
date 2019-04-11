@@ -28,13 +28,15 @@ Before executing the code, you have to complete the configuration file available
 1) Preprocess the data and keep the quantitative variables
 2) Run Kmean and  bisecting Kmeans
 3) Compare the predictions using Rand Index
-![Image link](https://Clusters.png)
+![Alt text](https://Clusters.png)
 ## Data Visualization
-Vegas library\\
-Smile library\\
-Plotly library\\
-Wispy library\\
-SwiftVis2\\
+<ul>
+<li>Vegas library</li>
+<li>Smile library</li>
+<li>Plotly library</li>
+<li>Wispy library</li>
+<li>SwiftVis2</li>
+</ul>
 Databricks has a built-in display() command that can display DataFrames as a table and create convenient one-click plots.
 ## Unit testing
 ScalaTest: assert evaluation\\
