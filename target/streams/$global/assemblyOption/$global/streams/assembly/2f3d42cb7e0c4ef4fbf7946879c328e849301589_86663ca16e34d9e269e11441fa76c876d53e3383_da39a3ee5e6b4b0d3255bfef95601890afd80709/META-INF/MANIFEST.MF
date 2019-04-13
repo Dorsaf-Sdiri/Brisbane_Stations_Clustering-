@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: plotly
+Implementation-Version: 0.2.0
+Specification-Vendor: co.theasi
+Specification-Title: plotly
+Implementation-Vendor-Id: co.theasi
+Specification-Version: 0.2.0
+Implementation-Vendor: co.theasi
+

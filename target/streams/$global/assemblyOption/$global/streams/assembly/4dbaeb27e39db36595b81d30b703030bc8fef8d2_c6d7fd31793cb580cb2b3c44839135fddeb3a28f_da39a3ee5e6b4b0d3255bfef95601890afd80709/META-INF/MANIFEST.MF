@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: numbers
+Implementation-Version: 0.4.1
+Specification-Vendor: io.circe
+Specification-Title: numbers
+Implementation-Vendor-Id: io.circe
+Specification-Version: 0.4.1
+Implementation-URL: https://github.com/travisbrown/circe
+Implementation-Vendor: io.circe
+

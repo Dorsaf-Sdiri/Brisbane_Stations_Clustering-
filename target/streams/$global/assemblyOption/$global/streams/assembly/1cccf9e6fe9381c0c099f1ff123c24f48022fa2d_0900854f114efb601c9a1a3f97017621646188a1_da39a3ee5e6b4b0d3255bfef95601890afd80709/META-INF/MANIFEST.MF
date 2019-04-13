@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: smile-plot
+Implementation-Version: 1.5.2
+Specification-Vendor: Haifeng Li
+Specification-Title: smile-plot
+Implementation-Vendor-Id: com.github.haifengl
+Specification-Version: 1.5.2
+Implementation-Vendor: Haifeng Li
+

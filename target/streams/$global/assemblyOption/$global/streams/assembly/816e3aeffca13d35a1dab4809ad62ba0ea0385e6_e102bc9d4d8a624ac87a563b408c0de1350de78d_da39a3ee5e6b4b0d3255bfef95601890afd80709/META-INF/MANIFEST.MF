@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: macros
+Implementation-Version: 0.3.6
+Specification-Vendor: org.vegas-viz
+Specification-Title: macros
+Implementation-Vendor-Id: org.vegas-viz
+Specification-Version: 0.3.6
+Implementation-URL: http://vegas-viz.org
+Implementation-Vendor: org.vegas-viz
+

@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: smile-core
+Implementation-Version: 1.5.2
+Specification-Vendor: Haifeng Li
+Specification-Title: smile-core
+Implementation-Vendor-Id: com.github.haifengl
+Specification-Version: 1.5.2
+Implementation-Vendor: Haifeng Li
+
