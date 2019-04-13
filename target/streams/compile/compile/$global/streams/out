@@ -1,4 +1,13 @@
-[0m[[0m[31merror[0m] [0m[0m/home/sdiri/Brisbane_Stations_Clustering-/src/main/scala/com/citybikes/clustering/Run.scala:119:277: Unable to find encoder for type stored in a Dataset.  Primitive types (Int, String, etc) and Product types (case classes) are supported by importing spark.implicits._  Support for serializing other types will be added in future releases.[0m
-[0m[[0m[31merror[0m] [0m[0m    val ds =df.select( df("address").cast("String").as("address"),df("cluster").cast("Int").as("cluster"),df("latitude").cast("Double").as("latitude"),df("longitude").cast("Double").as("longitude"),df("name").cast("String").as("name"),df("number").cast("Int").as("number")).as[dsSchema][0m
-[0m[[0m[31merror[0m] [0m[0m                                                                                                                                                                                                                                                                                    ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0m/home/sdiri/Brisbane_Stations_Clustering-/src/main/scala/com/citybikes/clustering/Test.scala:4:31: object ShouldMatchers is not a member of package org.scalatest.matchers[0m
+[0m[[0m[31merror[0m] [0m[0mimport org.scalatest.matchers.ShouldMatchers._[0m
+[0m[[0m[31merror[0m] [0m[0m                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/sdiri/Brisbane_Stations_Clustering-/src/main/scala/com/citybikes/clustering/Test.scala:6:34: not found: type ShouldMatchers[0m
+[0m[[0m[31merror[0m] [0m[0mclass Temp extends FunSuite with ShouldMatchers {[0m
+[0m[[0m[31merror[0m] [0m[0m                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/sdiri/Brisbane_Stations_Clustering-/src/main/scala/com/citybikes/clustering/Test.scala:15:60: value should is not a member of org.apache.spark.sql.DataFrame[0m
+[0m[[0m[31merror[0m] [0m[0m	test("Same predictions each time")  { this_model.clusters should equal (ref) }}[0m
+[0m[[0m[31merror[0m] [0m[0m	                                                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/sdiri/Brisbane_Stations_Clustering-/src/main/scala/com/citybikes/clustering/Test.scala:15:67: not found: value equal[0m
+[0m[[0m[31merror[0m] [0m[0m	test("Same predictions each time")  { this_model.clusters should equal (ref) }}[0m
+[0m[[0m[31merror[0m] [0m[0m	                                                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0mfour errors found[0m

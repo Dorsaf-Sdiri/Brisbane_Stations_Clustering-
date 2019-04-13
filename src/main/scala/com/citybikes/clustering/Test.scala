@@ -1,22 +1,17 @@
-package com.citybikes.clustering
+/*package com.citybikes.clustering
+import org.apache.spark.sql.SparkSession
 import org.scalatest.FunSuite
-import org.scalaml.app.ScalaMlTest
+import org.scalatest.matchers.ShouldMatchers._
 
-final class Test extends ScalaMlTest {
-	/**
-		* Name of the chapter the tests are related to
-		*/
-
-	test(s" Running main class") {
-		evaluate(Run)
-	}
-}
 class Temp extends FunSuite with ShouldMatchers {
-	val ref =
-	test("Same predictions each time")  { (Run.clusters) should equal (ref) }}
+	val spark = SparkSession
+		.builder.
+		master(Properties.SET_MASTER)
+		.appName("Clustering for Brisbane_CityBike")
+		.getOrCreate()
+	val this_model = new Modeling
+	val ClassifiedDF = spark.read.json(Properties.OUTPUT_JSON)
+  val ref= ClassifiedDF.select("cluster")
+	test("Same predictions each time")  { this_model.clusters should equal (ref) }}
+	*/
 
-//class test extends FunSuite {
-//	test("test") {
-//	assert(main.method)
-//}
-//}

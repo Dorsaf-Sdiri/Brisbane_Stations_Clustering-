@@ -4,7 +4,7 @@
 		module="brisbane_stations_clustering-_2.11"
 		revision="0.1"
 		status="integration"
-		publication="20190410124557"
+		publication="20190413144743"
 	>
 		<description>
 		Brisbane_Stations_Clustering-
@@ -36,6 +36,8 @@
 		<dependency org="org.apache.spark" name="spark-sql_2.11" rev="2.1.2" conf="compile->default(compile)"/>
 		<dependency org="org.apache.spark" name="spark-mllib_2.11" rev="2.1.2" conf="compile->default(compile)"/>
 		<dependency org="org.scalatest" name="scalatest_2.11" rev="3.0.5" conf="test->default(compile)"/>
+		<dependency org="org.scalatest" name="scalatest-funsuite_2.11" rev="3.0.0-SNAP13" conf="compile->default(compile)"/>
+		<dependency org="org.scalatest" name="scalatest-matchers_2.11" rev="3.0.0-SNAP13" conf="compile->default(compile)"/>
 		<dependency org="com.github.haifengl" name="smile-core" rev="1.5.2" conf="compile->default(compile)"/>
 		<dependency org="com.github.haifengl" name="smile-graph" rev="1.5.2" conf="compile->default(compile)"/>
 		<dependency org="com.github.haifengl" name="smile-math" rev="1.5.2" conf="compile->default(compile)"/>
