@@ -1,3 +1,0 @@
-export SPARK_SUBMIT_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=localhost:34173
-./bin/spark-submit --class "com.citybikes.clustering.Run" \                                                                                                                                       !9342
-          ../citybikes-clustering/target/scala-2.11/citybikes-clustering-assembly-0.1.jar
