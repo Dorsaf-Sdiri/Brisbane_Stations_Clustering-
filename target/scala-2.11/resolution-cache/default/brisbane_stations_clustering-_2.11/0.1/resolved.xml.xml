@@ -4,7 +4,7 @@
 		module="brisbane_stations_clustering-_2.11"
 		revision="0.1"
 		status="integration"
-		publication="20190413175422"
+		publication="20190414141021"
 	>
 		<description>
 		Brisbane_Stations_Clustering-
@@ -32,17 +32,9 @@
 	<dependencies>
 		<dependency org="org.scala-lang" name="scala-compiler" rev="2.11.8" conf="scala-tool->default,optional(default)"/>
 		<dependency org="org.scala-lang" name="scala-library" rev="2.11.8" conf="scala-tool->default,optional(default);compile->default(compile)"/>
-		<dependency org="org.apache.spark" name="spark-core_2.11" rev="2.1.2" conf="compile->default(compile)"/>
-		<dependency org="org.apache.spark" name="spark-sql_2.11" rev="2.1.2" conf="compile->default(compile)"/>
-		<dependency org="org.apache.spark" name="spark-mllib_2.11" rev="2.1.2" conf="compile->default(compile)"/>
-		<dependency org="org.scalatest" name="scalatest_2.11" rev="3.0.5" conf="test->default(compile)"/>
-		<dependency org="org.scalatest" name="scalatest-funsuite_2.11" rev="3.0.0-SNAP13" conf="compile->default(compile)"/>
-		<dependency org="org.scalatest" name="scalatest-matchers_2.11" rev="3.0.0-SNAP13" conf="compile->default(compile)"/>
-		<dependency org="com.github.haifengl" name="smile-core" rev="1.5.2" conf="compile->default(compile)"/>
-		<dependency org="com.github.haifengl" name="smile-graph" rev="1.5.2" conf="compile->default(compile)"/>
-		<dependency org="com.github.haifengl" name="smile-math" rev="1.5.2" conf="compile->default(compile)"/>
-		<dependency org="com.github.haifengl" name="smile-data" rev="1.5.2" conf="compile->default(compile)"/>
-		<dependency org="com.github.haifengl" name="smile-plot" rev="1.5.2" conf="compile->default(compile)"/>
+		<dependency org="org.apache.spark" name="spark-core_2.11" rev="2.1.2" conf="provided->default(compile)"/>
+		<dependency org="org.apache.spark" name="spark-sql_2.11" rev="2.1.2" conf="provided->default(compile)"/>
+		<dependency org="org.apache.spark" name="spark-mllib_2.11" rev="2.1.2" conf="provided->default(compile)"/>
 		<dependency org="org.vegas-viz" name="vegas_2.11" rev="0.3.6" conf="compile->default(compile)"/>
 		<dependency org="org.vegas-viz" name="vegas-spark_2.11" rev="0.3.6" conf="compile->default(compile)"/>
 		<dependency org="co.theasi" name="plotly_2.11" rev="0.2.0" conf="compile->default(compile)"/>

@@ -1,26 +1,22 @@
 package com.citybikes.clustering
-import org.apache.spark.ml.feature.VectorAssembler
-import org.apache.spark.ml.clustering.KMeans
-import org.apache.spark.ml.clustering.BisectingKMeans
 import org.apache.spark.sql.{SparkSession,SaveMode,DataFrame, functions}
 import org.apache.log4j.{Level, Logger}
-import org.apache.spark.ml.Pipeline
-import vegas._
+/*import vegas._
 import co.theasi.plotly
 import vegas.render.WindowRenderer._
 import vegas.sparkExt._
-//import scala.math._
-//import scala.io._
-//import org.apache.spark.ml.evaluation.MulticlassClassificationEvaluator
-//import org.apache.spark.mllib.evaluation.MulticlassMetrics
+import scala.math._
+import scala.io._
+import org.apache.spark.ml.evaluation.MulticlassClassificationEvaluator
+import org.apache.spark.mllib.evaluation.MulticlassMetrics
 
-//import smile._
-//import smile.plot.dendrogram
-//import smile.graph._
-//import smile.math._
-//import smile.data._
-//import smile.clustering.HierarchicalClustering
-//import org.apache.spark.ml.evaluation.ClusteringEvaluator
+import smile._
+import smile.plot.dendrogram
+import smile.graph._
+import smile.math._
+import smile.data._
+import smile.clustering.HierarchicalClustering
+import org.apache.spark.ml.evaluation.ClusteringEvaluator */
 
 
 object Run {
@@ -43,14 +39,14 @@ object Run {
 		val our_model = new Modeling
 
 
-		//val predictions2 = model2.transform(df3)
-		//val cost = model2.computeCost(df3)
+		/*val predictions2 = model2.transform(df3)
+		val cost = model2.computeCost(df3)
 		// Comparing the predictions of Kmeans and bisectingKmeans
-		//val adjustedRandIndex = GetRandIndex(predictions, predictions2)
+		val adjustedRandIndex = GetRandIndex(predictions, predictions2)
 		// Data Viz
-    //display(model, df3) Databricks
+    display(model, df3) Databricks
 
-		/* case class dsSchema (
+		 case class dsSchema (
 													address:String,
 													cluster:Int,
 													latitude:Double ,
@@ -60,8 +56,8 @@ object Run {
 												)
 
     val ds =df.select( df("address").cast("String").as("address"),df("cluster").cast("Int").as("cluster"),df("latitude").cast("Double").as("latitude"),df("longitude").cast("Double").as("longitude"),df("name").cast("String").as("name"),df("number").cast("Int").as("number")).as[dsSchema]
-    ds.printSchema() */
-    /*val dfNull = ClassifiedDF.na.fill(100)
+    ds.printSchema()
+    val dfNull = ClassifiedDF.na.fill(100)
     import spark.implicits._
 		val dfWithSchema = dfNull.toDF("address", "cluster", "latitude","longitude","name","number")
 		dfNull.printSchema()
@@ -74,13 +70,13 @@ object Run {
       .encodeY("longitude", Quantitative)
       .encodeColor("cluster", dataType=Nominal, bin=Bin(maxbins=5.0))
 
-    plot.show*/
+    plot.show
 
-		//Plot().withScatter("latitude", "longitude")
-		//val clusters3 = hclust(pdist(df3), "complete")
-		//dendrogram(clusters3)
-		//val y = clusters3.partition(5)
-		//plot(df3, y, '.', Palette.COLORS)
+		Plot().withScatter("latitude", "longitude")
+		val clusters3 = hclust(pdist(df3), "complete")
+		dendrogram(clusters3)
+		val y = clusters3.partition(5)
+		plot(df3, y, '.', Palette.COLORS) */
 
 	}
 }
