@@ -1,10 +1,10 @@
 package com.citybikes.clustering
 
-import com.typesafe.config._
+
 
 object Properties {
 
-	val config = ConfigFactory.load()
+
 	val SET_MASTER = "local"
   val NUM_CLUSTERS = 5
 	val NUM_SEEDS =1L
