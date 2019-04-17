@@ -9,7 +9,7 @@ import java.util.Properties
 
 		def getProp (propertyName: String) : String  = {
 			val properties = new Properties()
-			properties.load(new FileInputStream("/home/sdiri/Brisbane_Stations_Clustering-/src/main/resources/application.properties"))
+			properties.load(new FileInputStream("src/main/resources/application.properties"))
 			val property = properties.getProperty(propertyName)
 			property.toString()
 

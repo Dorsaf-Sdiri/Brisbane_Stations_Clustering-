@@ -69,6 +69,7 @@ class Modeling {
     .option("header", "true")
     .option("delimiter", ";")
     .save(outPutData.getProp("OUTPUT_DIR" ))
+  clusters.show()
   // Saving the dataset with labels
   logger.info( "Clustered data has been saved in "+outPutData.getProp("OUTPUT_DIR" ))
   // BisectingKMeans
