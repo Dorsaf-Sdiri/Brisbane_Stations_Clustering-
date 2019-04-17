@@ -7,25 +7,26 @@ import org.apache.spark.ml.feature.VectorAssembler
 import org.apache.spark.sql.{SaveMode, SparkSession}
 
 class Modeling {
+  val master, numberOfClusters, numberOfSeeds, inputData, outPutData, modelDir  = new prop
   val spark = SparkSession
     .builder.
-    master(Properties.SET_MASTER)
+    master(master.getProp("SET_MASTER"))
     .appName("Clustering for Brisbane_CityBike")
     .getOrCreate()
 
   // Preparing the input data
-  val df = spark.read.json(Properties.INPUT_DATA)
-  val numberOfClusters = Properties.NUM_CLUSTERS
-  val numberOfSeeds = Properties.NUM_SEEDS
+  val df = spark.read.json(inputData.getProp("INPUT_DATA"))
+  val numberofClusters = numberOfClusters.getProp("NUM_CLUSTERS").toInt
+  val numberofSeeds = numberOfSeeds.getProp("NUM_SEEDS").toInt
   val assembler = new VectorAssembler().setInputCols(Array("latitude", "longitude")).setOutputCol("features")
   val kmeans = new KMeans()
-    .setK(numberOfClusters).setSeed(numberOfSeeds)
+    .setK(numberofClusters).setSeed(numberofSeeds)
     .setFeaturesCol("features")
     .setPredictionCol("cluster")
 
   //Training model with KMeans
-  logger.info("number of cluster(s): " + Properties.NUM_CLUSTERS)
-  logger.info("number of seed(s): " + Properties.NUM_SEEDS)
+  logger.info("number of cluster(s): " + numberofClusters)
+  logger.info("number of seed(s): " + numberofSeeds)
   val pipeline = new Pipeline().setStages(Array(assembler, kmeans))
 
   // Make predictions
@@ -46,9 +47,9 @@ class Modeling {
   // Saving the model
   model.write
     .overwrite()
-    .save(Properties.MODEL_DIR)
+    .save(modelDir.getProp("MODEL_DIR"))
 
-  logger.info( "Model has been saved in {0}"+Properties.MODEL_DIR)
+  logger.info( "Model has been saved in {0}"+modelDir.getProp("MODEL_DIR"))
 
   val clusters = model.transform(df)
   clusters.write
@@ -56,7 +57,7 @@ class Modeling {
     .format("json")
     .option("header", "true")
     .option("delimiter", ";")
-    .save(Properties.OUTPUT_DIR)
+    .save(outPutData.getProp("OUTPUT_DIR" ))
 
 
   // Saving the dataset with labels
@@ -67,9 +68,9 @@ class Modeling {
     .format("json")
     .option("header", "true")
     .option("delimiter", ";")
-    .save(Properties.OUTPUT_DIR)
+    .save(outPutData.getProp("OUTPUT_DIR" ))
   // Saving the dataset with labels
-  logger.info( "Clustered data has been saved in "+Properties.OUTPUT_DIR)
+  logger.info( "Clustered data has been saved in "+outPutData.getProp("OUTPUT_DIR" ))
   // BisectingKMeans
   val bkm = new BisectingKMeans().setK(3).setSeed(1L).setFeaturesCol("features")
   val pipeline2 = new Pipeline().setStages(Array(assembler, bkm))

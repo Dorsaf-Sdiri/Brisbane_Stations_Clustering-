@@ -28,10 +28,11 @@ object Run {
 	logger.setLevel(Level.INFO)
 
 	def main(args: Array[String]): Unit = {
+		val master = new prop
 		//Creating a spark session
 		val spark = SparkSession
 			.builder.
-			master(Properties.SET_MASTER)
+			master(master.getProp("SET_MASTER"))
 			.appName("Clustering for Brisbane_CityBike")
 			.getOrCreate()
 

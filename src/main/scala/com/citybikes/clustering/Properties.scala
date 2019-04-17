@@ -1,15 +1,18 @@
 package com.citybikes.clustering
+import java.io.FileInputStream
+import java.util.Properties
 
 
 
-object Properties {
 
+	class prop {
 
-	val SET_MASTER = "local"
-  val NUM_CLUSTERS = 5
-	val NUM_SEEDS =1L
-	val INPUT_DATA = "Brisbane_Stations_Clustering-/Brisbane_CityBike.json"
-	val OUTPUT_DIR = "Brisbane_Stations_Clustering-/Output"
-	val MODEL_DIR = "Brisbane_Stations_Clustering-/Output"
-  val OUTPUT_JSON= "Brisbane_Stations_Clustering-/ClassifiedDF.json"
+		def getProp (propertyName: String) : String  = {
+			val properties = new Properties()
+			properties.load(new FileInputStream("Brisbane_Stations_Clusering-/src/main/resources/application.properties"))
+			val property = properties.getProperty(propertyName)
+			property.toString()
+
+		}
 	}
+
