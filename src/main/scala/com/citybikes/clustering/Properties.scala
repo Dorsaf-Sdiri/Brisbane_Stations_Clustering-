@@ -8,7 +8,7 @@ import java.io.FileInputStream
 
 		def getProp (propertyName: String) : String  = {
 			val properties = new Properties()
-			properties.load(new FileInputStream("./Application.properties"))
+			properties.load(new FileInputStream("Application.properties"))
 			val property = properties.getProperty(propertyName)
 			property.toString()
 

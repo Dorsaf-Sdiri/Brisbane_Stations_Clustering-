@@ -4,7 +4,7 @@
 		module="brisbane_stations_clustering-$sources"
 		revision="0.1"
 		status="integration"
-		publication="20190427155112"
+		publication="20190427233006"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>
